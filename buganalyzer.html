@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Clustering Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ <div class="upperbar">
+    <h1>Bug Analyzer</h1>
+    <img class="logo" src="bug-logo1.jpg" alt="logo of website">
+     <button class="btn2">Log-In
+        <audio id="login" preload="auto">
+            <source src="login.mp3">
+        </audio>
+     </button>
+ </div>
+ <script>
+     var homepagesound = $("#homepage")[0];
+     $(".btn1").mouseenter(function(){
+         homepagesound.play();
+     });
+ </script> 
+ <script>
+    var loginsound = $("#login")[0];
+    $(".btn2").mouseenter(function(){
+        loginsound.play();
+    });
+</script> 
+ <nav class="navigation">
+    <ul class="nav_list">
+        <li class="n1"><a href="#about">About</a>
+            <audio id="about" preload="auto">
+                <source src="about.mp3">
+            </audio>
+        </li>
+        <li class="n2"><a href='cluster.html'>Error Clusters</a>
+            <audio id="payment" preload="auto">
+                <source src="payment.mp3">
+            </audio>
+        </li>
+        <li class="n3"><a href="#products">New Errors test</a>
+            <audio id="products" preload="auto">
+                <source src="products.mp3">
+            </audio>
+        </li>
+        <li class="n4"><a href="scope.html">Future Scope</a>
+            <audio id="topdeals" preload="auto">
+                <source src="top_deals.mp3">
+            </audio>
+        </li>
+        <li class="n5"><a href="FAQ.html">FAQ</a>
+            <audio id="services" preload="auto">
+                <source src="services.mp3">
+            </audio>
+        </li>
+    </ul>
+    <div class="rightnav">
+        <input class="search" type="text" name="search" id="search">
+        <audio id="typesearch" preload="auto">
+            <source src="typesearch.mp3">
+        </audio>
+        </input>
+        <button class="btn3">Search
+            <audio id="searchbtn" preload="auto">
+                <source src="searchbtn.mp3">
+            </audio>
+        </button>
+    </div>
+ </nav>
+ <script>
+    var aboutsound = $("#about")[0];
+    $(".n1").mouseenter(function(){
+        aboutsound.play();
+    });
+</script>
+<script>
+    var paymentsound = $("#payment")[0];
+    $(".n2").mouseenter(function(){
+        paymentsound.play();
+    });
+</script>
+<script>
+    var productssound = $("#products")[0];
+    $(".n3").mouseenter(function(){
+        productssound.play();
+    });
+</script>
+<script>
+    var topdealssound = $("#topdeals")[0];
+    $(".n4").mouseenter(function(){
+        topdealssound.play();
+    });
+</script>
+<script>
+    var servicessound = $("#services")[0];
+    $(".n5").mouseenter(function(){
+        servicessound.play();
+    });
+</script>
+<script>
+    var typesearchsound = $("#typesearch")[0];
+    $(".search").mouseenter(function(){
+        typesearchsound.play();
+    });
+</script>
+<script>
+    var searchbtnsound = $("#searchbtn")[0];
+    $(".btn3").mouseenter(function(){
+        searchbtnsound.play();
+    });
+</script>
+ <div class="bestdeals">
+     <h3>Types of errors and their definition</h3>
+     <img class="mySlides" src="sim_error.png" alt="The best cheap wireless headphone deals">
+     <img class="mySlides" src="syn_error.png" alt="The best mobile phone deals">
+     <img class="mySlides" src="seman_error.png" alt="The best laptop deals">
+     <button class="leftbtn" onclick="plusDivs(-1)">&#10094;</button>
+     <button class="rightbtn" onclick="plusDivs(+1)">&#10095;</button>
+ </div> 
+ </div>
+ <div class="ending">
+     <p><br>
+        Developers : Soham Saha , Anvitha Nagubothu , Vanitha J , Paruchuru Sainath , Munnam Shyamala , Samala Rahul<br>
+        <br>
+        &#169 All copyrights reserved <br>
+     </p>
+ </div>
+ </body> 
+</body>
+</html>
