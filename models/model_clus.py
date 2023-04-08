@@ -2,14 +2,14 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import sentence_transformers
 from sentence_transformers import SentenceTransformer
-import nltkp
+#import nltkp
 import string
 import re
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+#from nltk.corpus import stopwords
+#from nltk.tokenize import word_tokenize
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 
 def train_clus_model():
     data_df = pd.read_csv(r'error_data_csv.csv')
@@ -74,20 +74,20 @@ def train_clus_model():
 
     for i in range(0,rslt_df.shape[0]):
         if rslt_df['cluster'].iloc[i]==clus :
-            print(rslt_df['Error Description'].iloc[i])
+            #print(rslt_df['Error Description'].iloc[i])
             count = count + 1
         else :
             clus = clus + 1
-            print('**************************************************************')
-            print('Contents of cluster '+str(clus))
-            print(rslt_df['Error Description'].iloc[i])
+            #print('**************************************************************')
+            #print('Contents of cluster '+str(clus))
+            #print(rslt_df['Error Description'].iloc[i])
             cluster_length.append(count)
             count=1
     cluster_length.append(count)
 
     #printing the details of the error clusters
-    print('Details about the error clusters :')
-    print('*******************************************************')
-    for i in range(0,num_of_clusters):
-        print('Number of errors in cluster '+str(i)+' : '+str(cluster_length[i]))
-        print('-----------------------------------------------------')
+    #print('Details about the error clusters :')
+    #print('*******************************************************')
+    #for i in range(0,num_of_clusters):
+        #print('Number of errors in cluster '+str(i)+' : '+str(cluster_length[i]))
+        #print('-----------------------------------------------------')
