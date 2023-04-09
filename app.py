@@ -69,7 +69,7 @@ def upload():
             # run model for dynamic file
             err_count_arr, result = model.train_clus_model(filePath)
             result = result.drop(['Clean data'], axis=1)
-            return render_template('cluster.html', err_count_arr = err_count_arr, result = result.to_json())
+            return render_template('cluster.html', err_count_arr0 = err_count_arr[0], err_count_arr1 = err_count_arr[1], err_count_arr2 = err_count_arr[2], err_count_arr3 = err_count_arr[3], err_count_arr4 = err_count_arr[4], err_count_arr5 = err_count_arr[5], result0 = (result[result.cluster==0])['Error Description'].values, result1 = (result[result.cluster==1])['Error Description'].values, result2 = (result[result.cluster==2])['Error Description'].values, result3 = (result[result.cluster==3])['Error Description'].values, result4 = (result[result.cluster==4])['Error Description'].values, result5 = (result[result.cluster==5])['Error Description'].values)
 
         return "<h1>No file selected!</h1>"
 
