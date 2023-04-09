@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clusters</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="/static/style1.css">
     
-    <script src="script1.js"></script>
+    <script src="/static/script1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="Upperbar">
-    <a href="buganalyzer.html"><img class="logo" src="bug-logo1.jpg" alt="logo of website"></a>
+    <a href="/"><img class="logo" src="bug-logo1.jpg" alt="logo of website"></a>
     <h3>Clusters</h3>
-   <input type="file" class="btn1" name="Upload" value="Upload">
-
-   <input type="submit" class="btn2" value="Run"><br>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" class="btn1" name="csv_file" accept=".csv" >
+        <input type="submit" class="btn2" value="upload" >
+    </form>
 </div>
 <div class="products">
-    
     
     
     <button class="p1">Cluster 1 </button>
