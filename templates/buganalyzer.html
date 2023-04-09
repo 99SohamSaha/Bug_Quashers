@@ -5,40 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error Clustering Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
- <div class="upperbar">
+<div class="upperbar">
     <h1>Bug Analyzer</h1>
-    <img class="logo" src="bug-logo1.jpg" alt="logo of website">
-     <button class="btn2">Log-In
+    <img class="logo" src="/static/src/bug-logo1.jpg" alt="logo of website">
+    <button class="btn2">Log-In
         <audio id="login" preload="auto">
             <source src="login.mp3">
         </audio>
-     </button>
- </div>
- <script>
-     var homepagesound = $("#homepage")[0];
-     $(".btn1").mouseenter(function(){
-         homepagesound.play();
-     });
- </script> 
- <script>
+    </button>
+</div>
+<script>
+    var homepagesound = $("#homepage")[0];
+    $(".btn1").mouseenter(function(){
+        homepagesound.play();
+    });
+</script> 
+<script>
     var loginsound = $("#login")[0];
     $(".btn2").mouseenter(function(){
         loginsound.play();
     });
 </script> 
- <nav class="navigation">
+<nav class="navigation">
     <ul class="nav_list">
         <li class="n1"><a href="#about">About</a>
             <audio id="about" preload="auto">
                 <source src="about.mp3">
             </audio>
         </li>
-        <li class="n2"><a href='cluster.html'>Error Clusters</a>
+        <li class="n2"><a href='/cluster'>Error Clusters</a>
             <audio id="payment" preload="auto">
                 <source src="payment.mp3">
             </audio>
@@ -48,12 +48,12 @@
                 <source src="products.mp3">
             </audio>
         </li>
-        <li class="n4"><a href="scope.html">Future Scope</a>
+        <li class="n4"><a href="/scope">Future Scope</a>
             <audio id="topdeals" preload="auto">
                 <source src="top_deals.mp3">
             </audio>
         </li>
-        <li class="n5"><a href="FAQ.html">FAQ</a>
+        <li class="n5"><a href="/FAQ">FAQ</a>
             <audio id="services" preload="auto">
                 <source src="services.mp3">
             </audio>
@@ -71,8 +71,8 @@
             </audio>
         </button>
     </div>
- </nav>
- <script>
+</nav>
+<script>
     var aboutsound = $("#about")[0];
     $(".n1").mouseenter(function(){
         aboutsound.play();
@@ -114,22 +114,22 @@
         searchbtnsound.play();
     });
 </script>
- <div class="bestdeals">
-     <h3>Types of errors and their definition</h3>
-     <img class="mySlides" src="sim_error.png" alt="The best cheap wireless headphone deals">
-     <img class="mySlides" src="syn_error.png" alt="The best mobile phone deals">
-     <img class="mySlides" src="seman_error.png" alt="The best laptop deals">
-     <button class="leftbtn" onclick="plusDivs(-1)">&#10094;</button>
-     <button class="rightbtn" onclick="plusDivs(+1)">&#10095;</button>
- </div> 
- </div>
- <div class="ending">
-     <p><br>
+<div class="bestdeals">
+    <h3>Types of errors and their definition</h3>
+    <img class="mySlides" src="/static/src/sim_error.png" alt="The best cheap wireless headphone deals">
+    <img class="mySlides" src="/static/src/syn_error.png" alt="The best mobile phone deals">
+    <img class="mySlides" src="/static/src/seman_error.png" alt="The best laptop deals">
+    <button class="leftbtn" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="rightbtn" onclick="plusDivs(+1)">&#10095;</button>
+</div> 
+</div>
+<div class="ending">
+    <p><br>
         Developers : Soham Saha , Anvitha Nagubothu , Vanitha J , Paruchuru Sainath , Munnam Shyamala , Samala Rahul<br>
         <br>
         &#169 All copyrights reserved <br>
-     </p>
- </div>
- </body> 
+    </p>
+</div>
+</body> 
 </body>
 </html>
