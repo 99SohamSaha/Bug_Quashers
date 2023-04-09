@@ -11,8 +11,8 @@ from sklearn.cluster import KMeans
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 
-def train_clus_model():
-    data_df = pd.read_csv(r'error_data_csv.csv')
+def train_clus_model(csv_file):
+    data_df = pd.read_csv(csv_file)
 
     reduced_data = []
     for i in range(0,data_df.shape[0]):

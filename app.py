@@ -63,10 +63,11 @@ def upload():
         file = request.files[first_key]
         if file.filename != "":
             filename = file.filename
-            file.save(os.path.join("uploads", filename))
+            filePath = os.path.join("uploads", filename)
+            file.save(filePath)
             
-            # run model
-            err_count_arr, result = model.train_clus_model()
+            # run model for dynamic file
+            err_count_arr, result = model.train_clus_model(filePath)
             result = result.drop(['Clean data'], axis=1)
             return render_template('cluster.html', err_count_arr = err_count_arr, result = result.to_json())
 
