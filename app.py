@@ -22,6 +22,18 @@ def cluster():
     return render_template('cluster.html')
 
 
+# FAQ route
+@app.route('/FAQ')
+def FAQ():
+    return render_template('FAQ.html')
+
+
+# scope route
+@app.route('/scope')
+def scope():
+    return render_template('scope.html')
+
+
 # master run API route
 @app.route('/api/v1.0/run')
 def run():
