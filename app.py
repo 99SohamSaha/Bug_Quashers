@@ -43,7 +43,7 @@ def run():
     # update global values
     # return required value
     result = result.drop(['Clean data'], axis=1)
-    return result.to_json()
+    return err_count_arr, result.to_json()
 
 
 # get error count from cluster number route
@@ -55,7 +55,8 @@ def get_error_count(cluster_no):
     return str(error_count)
 
 
-@app.route("/upload", methods=["POST"])
+# upload csv, train model, and then return results
+@app.route("/cluster/run", methods=["POST"])
 def upload():
     if request.method == "POST":
         first_key = next(iter(request.files))
@@ -63,10 +64,13 @@ def upload():
         if file.filename != "":
             filename = file.filename
             file.save(os.path.join("uploads", filename))
-            with open(os.path.join("uploads", filename), "r") as f:
-                contents = f.read()
-            return f"<h1>CSV file contents:</h1><pre>{contents}</pre>"
-    return "<h1>No file selected!</h1>"
+            
+            # run model
+            err_count_arr, result = model.train_clus_model()
+            result = result.drop(['Clean data'], axis=1)
+            return render_template('cluster.html', err_count_arr = err_count_arr, result = result.to_json())
+
+        return "<h1>No file selected!</h1>"
 
 
 # driver function
