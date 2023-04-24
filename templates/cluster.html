@@ -23,23 +23,114 @@
     
     
     <button class="p1">Cluster 1 </button>
-    <input class="clus1" type="text" name="clus1" id="clus1" placeholder = "No. of clusters" value= "{{ err_count_arr0 }}"></input>
+    <input class="clus1" type="text" name="clus1" id="clus1" placeholder = "No. of errors" value= "{{ err_count_arr0 }}"></input>
     <textarea class="desc1" type="text" name="desc1" id="desc1" placeholder = "List of Errors">{{ result0 }}</textarea>
+    <button class="exp1" id="export-button1">Export Text</button>
+<script>
+  document.getElementById('export-button1').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc1').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster1_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key1" type="text" name="key1" id="key1" value= "{{ keyword0 }}"></input>
     <button class="p2">Cluster 2 </button>
-    <input class="clus2" type="text" name="clus2" id="clus2" placeholder = "No. of clusters" value= "{{ err_count_arr1 }}"></input>
+    <input class="clus2" type="text" name="clus2" id="clus2" placeholder = "No. of errors" value= "{{ err_count_arr1 }}"></input>
     <textarea class="desc2" type="text" name="desc2" id="desc2" placeholder = "List of Errors">{{ result1 }}</textarea>
+    <button class="exp2" id="export-button2">Export Text</button>
+<script>
+  document.getElementById('export-button2').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc2').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster2_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key2" type="text" name="key2" id="key2" value= "{{ keyword1 }}"></input>
     <button class="p3">Cluster 3 </button>
-    <input class="clus3" type="text" name="clus3" id="clus3" placeholder = "No. of clusters" value= "{{ err_count_arr2 }}"></input>
+    <input class="clus3" type="text" name="clus3" id="clus3" placeholder = "No. of errors" value= "{{ err_count_arr2 }}"></input>
     <textarea class="desc3" type="text" name="desc3" id="desc3" placeholder = "List of Errors">{{ result2 }}</textarea>
+    <button class="exp3" id="export-button3">Export Text</button>
+<script>
+  document.getElementById('export-button3').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc3').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster3_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key3" type="text" name="key3" id="key3" value= "{{ keyword2 }}"></input>
     <button class="p4">Cluster 4 </button>
-    <input class="clus4" type="text" name="clus4" id="clus4" placeholder = "No. of clusters" value= "{{ err_count_arr3 }}"></input>
+    <input class="clus4" type="text" name="clus4" id="clus4" placeholder = "No. of errors" value= "{{ err_count_arr3 }}"></input>
     <textarea class="desc4" type="text" name="desc4" id="desc4" placeholder = "List of Errors">{{ result3 }}</textarea>
+    <button class="exp4" id="export-button4">Export Text</button>
+<script>
+  document.getElementById('export-button4').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc4').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster4_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key4" type="text" name="key4" id="key4" value= "{{ keyword3 }}"></input>
     <button class="p5">Cluster 5 </button>
-    <input class="clus5" type="text" name="clus5" id="clus5" placeholder = "No. of clusters" value= "{{ err_count_arr4 }}"></input>
+    <input class="clus5" type="text" name="clus5" id="clus5" placeholder = "No. of errors" value= "{{ err_count_arr4 }}"></input>
     <textarea class="desc5" type="text" name="desc5" id="desc5" placeholder = "List of Errors">{{ result4 }}</textarea>
+    <button class="exp5" id="export-button5">Export Text</button>
+<script>
+  document.getElementById('export-button5').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc5').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster5_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key5" type="text" name="key5" id="key5" value= "{{ keyword4 }}"></input>
     <button class="p6">Cluster 6 </button>
-    <input class="clus6" type="text" name="clus6" id="clus6" placeholder = "No. of clusters" value= "{{ err_count_arr5 }}"></input>
+    <input class="clus6" type="text" name="clus6" id="clus6" placeholder = "No. of errors" value= "{{ err_count_arr5 }}"></input>
     <textarea class="desc6" type="text" name="desc6" id="desc6" placeholder = "List of Errors">{{ result5 }}</textarea>
+    <button class="exp6" id="export-button6">Export Text</button>
+<script>
+  document.getElementById('export-button6').addEventListener('click', exportText);
+
+ function exportText() {
+    const text = document.getElementById('desc6').value;
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'cluster6_errors.txt';
+    link.click();
+    }
+</script>
+    <input class="key6" type="text" name="key6" id="key6" value= "{{ keyword5 }}"></input>
+
 </div>
 </body>
 </html>

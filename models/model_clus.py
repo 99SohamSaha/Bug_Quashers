@@ -65,4 +65,54 @@ def train_clus_model(csv_file):
             count=1
     # error count array
     err_count_arr.append(count)
-    return err_count_arr, rslt_df
+
+    #importing some extra libraries
+    import nltk
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    from nltk import tokenize
+    from operator import itemgetter
+    import math
+    from nltk.corpus import stopwords
+    from nltk.tokenize import word_tokenize
+    stop_words = set(stopwords.words('english'))
+
+    #extracting the frequently occuring words from the clusters
+    keywords = []
+    for i in range(0,num_of_clusters):
+        print("Frequently occuring words (top 5) in cluster "+str(i)+" :")
+        print("------------------------------------------------------------")
+        cluster_any_df = rslt_df[rslt_df.cluster==i]
+        cluster_any_String = ""
+        for k in range(0,cluster_any_df.shape[0]):
+            cluster_any_String = cluster_any_String + str(cluster_any_df['Clean data'].iloc[k]) + str(" ")
+
+        total_words = word_tokenize(cluster_any_String)
+        tf_score = {}
+        total_word_length = len(total_words)
+        for each_word in total_words:
+            each_word = each_word.replace('.','')
+            if each_word not in stop_words:
+                if each_word in tf_score:
+                    tf_score[each_word]+=1
+                else:
+                    tf_score[each_word] = 1
+
+        tf_score.update((x,y/int(total_word_length)) for x, y in tf_score.items())
+        #print(tf_score)
+        sorted_tf_score = dict(sorted(tf_score.items(), key=lambda item: item[1],reverse=True))
+        #print(tf_score.keys())
+        #print(tf_score)
+    
+        keys = list(sorted_tf_score.keys())
+        #print(keys[0:5])
+        keywords.append(keys[0:5])
+        #print("------------------------------------------------------------")
+
+
+    return err_count_arr, rslt_df, keywords
+
+    def error_classify(txt_file,csv_file):
+        return
+    
+
